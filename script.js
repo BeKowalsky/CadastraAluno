@@ -53,7 +53,7 @@ function adicionaAluno(){
         valorNascimento,
         valorIdade,
         valorNumero
-    }
+    };
 
     //Armazena o item Alunos dentro do objeto
     var alunosCriados = [...Alunos, dados];
