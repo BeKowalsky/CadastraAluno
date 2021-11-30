@@ -1,0 +1,29 @@
+footer {
+    background-color: var(--HeadFoot);
+    bottom: 0;
+    color: var(--LetrasFundoMaisEscuro);
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    margin-top: 15px;
+    padding: 20px;
+    width:100%;
+}
+
+@media screen and (min-width: 1100px) and (max-width: 1298px){
+    footer {
+        margin-top: 15px;
+    }
+}
+
+@media screen and (min-width: 1299px) and (max-width: 1300px){
+    footer {
+        margin-top: -10px;
+    }
+}
+
+@media screen and (max-width: 1030px){
+    footer{
+        display: none;
+    }
+}

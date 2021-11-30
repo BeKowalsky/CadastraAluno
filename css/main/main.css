@@ -1,0 +1,47 @@
+#telasPequenas {
+    display: none;
+    color: var(--linhasTabela);
+    margin-top: 50%;
+}
+
+h2 {
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    min-height: 85vh;
+}
+
+div {
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+input {
+    border-radius: 10px;
+    width: 35%;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 15px;
+    margin-left: 10%;
+}
+
+#dataAlunoNascimento {
+    padding: 8px;
+    width: 36%;
+}
+
+@media screen and (max-width: 1030px){
+    h2, div, input, #dataAlunoNascimento{
+        display: none;
+    }
+    main {
+        min-height: 0;
+    }
+    #telasPequenas {
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,11 @@
+:root { 
+    --fundo: #87cefa52;
+    --HeadFoot: #0F3F76;
+    --LetrasFundoMaisEscuro: white;
+    --botaoApaga: rgb(207, 1, 1);
+    --botaoApagaHover: rgb(173, 7, 7);
+    --botaoConclui: rgb(28, 156, 28);
+    --botaoConcluiHover: green;
+    --titulosTabela: #555555;
+    --linhasTabela: #000000;
+}

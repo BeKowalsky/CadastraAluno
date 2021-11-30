@@ -1,0 +1,24 @@
+header {
+    background-color: var(--HeadFoot);
+    padding: 20px;
+    width: 100%;
+}
+
+h1 {
+    color: var(--LetrasFundoMaisEscuro);
+    display: flex;
+    font-size: 30px;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+hr {
+    margin-top: -2px;
+    width: 100%;
+}
+
+@media screen and (max-width: 1030px){
+    header{
+        display: none;
+    }
+}

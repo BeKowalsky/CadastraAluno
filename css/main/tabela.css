@@ -1,0 +1,24 @@
+table {
+    margin: 20px 0 40px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 70%;
+}
+
+thead {
+    background-color: var(--titulosTabela);
+    color: var(--LetrasFundoMaisEscuro);
+    font-weight: bold;
+}
+
+td, th{
+    border: 1px solid var(--linhasTabela);
+    padding: 8px 15px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1030px){
+    table{
+        display: none;
+    }
+}

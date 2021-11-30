@@ -1,0 +1,38 @@
+#delete {
+    background-color: var(--botaoApaga);
+    font-size: 15px;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin-top: 0;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 50%;
+    border-radius: 0;
+    display: none;
+}
+
+#delete:hover {
+    background-color: var(--botaoApagaHover);
+}
+
+button {
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    width: 20%;
+    background-color: var(--botaoConclui);
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--botaoConcluiHover);
+}
+
+@media screen and (max-width: 1030px){
+    button{
+        display: none;
+    }
+}

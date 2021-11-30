@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Cadastro e Notas de alunos</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="reset/reset.css">
+    <link rel="stylesheet" href="css/cores.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/head.css">
+    <link rel="stylesheet" href="css/main/main.css">
+    <link rel="stylesheet" href="css/main/botao.css">
+    <link rel="stylesheet" href="css/main/tabela.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <header>
+        <h1>Universidade Kowalsky</h1>
+    </header>
+    <hr>
+    <main>
+        <h1 id="telasPequenas">TAMANHO DA TELA INCOMPATÍVEL</h1>
+        <h2>Cadastro de Alunos:</h2>
+        <div>
+            <label for="nomeAluno">
+                <input type="text" id="nomeAluno" placeholder="Digite o NOME do aluno:" onchange="nomeAluno(this)" required>
+            </label>
+            <label for="sobrenomeAluno">
+                <input type="text" id="sobrenomeAluno" placeholder="Digite o SOBRENOME do aluno:" onchange="sobrenomeAluno(this)" required>
+            </label>
+        </div>
+        <div>
+            <label for="dataAlunoNascimento">
+                <input type="date" id="dataAlunoNascimento" onchange="nascimentoAluno(this)" required>
+            </label>
+            <label for="numeroAlunoOuResponsáveis">
+                <input type="tel" id="numeroAlunoOuResponsáveis" placeholder="Número do Aluno/Responsável:" onchange="numeroAlunoOuResponsavel(this)" onkeypress="mask(this, mphone);" onblur="mask(this, mphone)" required>
+            </label>
+        </div>
+        <br>
+        <button id="botao">CONCLUIR</button>
+        <table onload="loaded()">
+            <thead>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Data de Nascimento</th>
+                <th>Idade</th>
+                <th>Telefone</th>
+            </thead>
+            <tbody id="alunos">
+            </tbody>
+        </table>
+        <button id="delete" onclick="deleteAluno(this)">EXCLUIR TODOS</button>
+    </main>
+    
+    <footer>
+        &copy; Desenvolvido por Bernardo Magueta Kowalsky
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
