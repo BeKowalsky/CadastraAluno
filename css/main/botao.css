@@ -4,11 +4,10 @@
     padding: 8px 15px;
     cursor: pointer;
     margin-top: 0;
-    margin-left: 50%;
+    margin-left: 0;
     transform: translate(-50%);
-    width: 50%;
+    width: 100%;
     border-radius: 0;
-    display: none;
 }
 
 #delete:hover {
