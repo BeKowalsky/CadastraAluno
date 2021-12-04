@@ -18,7 +18,6 @@ onload = function loaded() {
     let alunos = localStorage.getItem('Alunos') || null;
     const tabela = document.getElementById("alunos");
 
-    //Se não tiver aluno cadastrado
     if (!alunos) {
         tabela.insertAdjacentHTML('afterbegin', `
             <h1 
@@ -27,7 +26,7 @@ onload = function loaded() {
                 Não existem alunos cadastrados
             </h1>
         `)
-    } else { //Quadno tiver aluno cadastrado
+    } else {
         alunos = JSON.parse(alunos)
         console.log(alunos)
 
@@ -53,12 +52,14 @@ onload = function loaded() {
             <td>
                 ${Aluno.valorNumero}
             </td>
-            <button 
-                id="delete"
-                onClick="deleteCurrentAlun(this, '${nomeAtualDoAluno}')"
-            >
-            Remover ${nomeAtualDoAluno}
-            </button>
+            <td>
+                <button 
+                    id="delete"
+                    onClick="deleteCurrentAlun(this, '${nomeAtualDoAluno}')"
+                >
+                Remover ${nomeAtualDoAluno}
+                </button>
+            </td>
             `;
             //.split('-').reverse().join('/') --> Inverte a data para ficar no formato BR
             aluno.innerHTML = Aluno;
@@ -74,7 +75,7 @@ function adicionaAluno() {
     var anoAtual = dataAtual.getFullYear()
 
     //Pega a data de nascimento e em seguida o ano
-    var dataNascimento = new Date(2020);
+    var dataNascimento = new Date(valorNascimento);
     var anoNascimento = dataNascimento.getFullYear();
 
     //Calcula a idade
@@ -96,13 +97,10 @@ function adicionaAluno() {
     var alunosCriados = [...Alunos, dados];
     localStorage.setItem('Alunos', JSON.stringify(alunosCriados));
 
-
     document.location.reload(true);
 }
 
-//Apaga o aluno
 const deleteCurrentAlun = (element, nome) => {
-
     element.parentNode.parentNode.remove()
     let alunos = JSON.parse(localStorage.getItem('Alunos'))|| null;
 
@@ -112,8 +110,14 @@ const deleteCurrentAlun = (element, nome) => {
 
     (localStorage.clear())
     JSON.stringify(localStorage.setItem('Alunos', alunos))
+}
 
-    document.location.reload(true);
+function deleteAluno() {
+    var Aluno = JSON.parse(localStorage.getItem('Alunos')) || [];
+    for (Aluno of Aluno) {
+        localStorage.removeItem('Alunos');
+        document.location.reload(true);
+    }
 }
 
 //Mascara para Telefone
