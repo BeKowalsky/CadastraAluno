@@ -52,14 +52,14 @@ onload = function loaded() {
             <td>
                 ${Aluno.valorNumero}
             </td>
-            <td>
+            
                 <button 
                     id="delete"
                     onClick="deleteCurrentAlun(this, '${nomeAtualDoAluno}')"
                 >
                 Remover ${nomeAtualDoAluno}
                 </button>
-            </td>
+            
             `;
             //.split('-').reverse().join('/') --> Inverte a data para ficar no formato BR
             aluno.innerHTML = Aluno;
