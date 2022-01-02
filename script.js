@@ -14,6 +14,10 @@ function numeroAlunoOuResponsavel(elemento) {
     return valorNumero = elemento.value; //Retorna o valor do input que pede o Número do Aluno/Responsável
 }
 
+let footer = document.getElementById('rodape');
+anoAtual = new Date().getFullYear();
+footer.innerText = `Copyright © ${anoAtual} - Bernardo Magueta Kowalsky`;
+
 onload = function loaded() {
     let alunos = localStorage.getItem('Alunos') || null;
     const tabela = document.getElementById("alunos");
